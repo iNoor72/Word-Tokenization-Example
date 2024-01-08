@@ -44,4 +44,9 @@ extension TokenizationViewController: UITextFieldDelegate {
         guard let text = textField.text else { return }
         tokenizeText(text)
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return false
+    }
 }
