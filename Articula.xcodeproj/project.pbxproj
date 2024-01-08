@@ -9,21 +9,37 @@
 /* Begin PBXBuildFile section */
 		7C06D0082B4C4FA5006FE17E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06D0072B4C4FA5006FE17E /* AppDelegate.swift */; };
 		7C06D00A2B4C4FA5006FE17E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06D0092B4C4FA5006FE17E /* SceneDelegate.swift */; };
-		7C06D00C2B4C4FA5006FE17E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06D00B2B4C4FA5006FE17E /* ViewController.swift */; };
+		7C06D00C2B4C4FA5006FE17E /* TokenizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06D00B2B4C4FA5006FE17E /* TokenizationViewController.swift */; };
 		7C06D00F2B4C4FA5006FE17E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C06D00D2B4C4FA5006FE17E /* Main.storyboard */; };
 		7C06D0112B4C4FA7006FE17E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C06D0102B4C4FA7006FE17E /* Assets.xcassets */; };
 		7C06D0142B4C4FA7006FE17E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C06D0122B4C4FA7006FE17E /* LaunchScreen.storyboard */; };
+		7C06D0262B4C61ED006FE17E /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06D01E2B4C61ED006FE17E /* Tokenizer.swift */; };
+		7C06D0272B4C61ED006FE17E /* SpanishTokenizers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06D01F2B4C61ED006FE17E /* SpanishTokenizers.swift */; };
+		7C06D0282B4C61ED006FE17E /* EnglishTokenizers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06D0202B4C61ED006FE17E /* EnglishTokenizers.swift */; };
+		7C06D0292B4C61ED006FE17E /* TokenizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06D0212B4C61ED006FE17E /* TokenizationService.swift */; };
+		7C06D02A2B4C61ED006FE17E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06D0232B4C61ED006FE17E /* String.swift */; };
+		7C06D02B2B4C61ED006FE17E /* SupportedLanguages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06D0252B4C61ED006FE17E /* SupportedLanguages.swift */; };
+		7C06D0322B4C6276006FE17E /* TokenizationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06D0312B4C6276006FE17E /* TokenizationPresenter.swift */; };
+		7C06D0342B4C6280006FE17E /* TokenizationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06D0332B4C6280006FE17E /* TokenizationInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7C06D0042B4C4FA5006FE17E /* Articula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Articula.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C06D0072B4C4FA5006FE17E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C06D0092B4C4FA5006FE17E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7C06D00B2B4C4FA5006FE17E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7C06D00B2B4C4FA5006FE17E /* TokenizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenizationViewController.swift; sourceTree = "<group>"; };
 		7C06D00E2B4C4FA5006FE17E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C06D0102B4C4FA7006FE17E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C06D0132B4C4FA7006FE17E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C06D0152B4C4FA7006FE17E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C06D01E2B4C61ED006FE17E /* Tokenizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tokenizer.swift; sourceTree = "<group>"; };
+		7C06D01F2B4C61ED006FE17E /* SpanishTokenizers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpanishTokenizers.swift; sourceTree = "<group>"; };
+		7C06D0202B4C61ED006FE17E /* EnglishTokenizers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnglishTokenizers.swift; sourceTree = "<group>"; };
+		7C06D0212B4C61ED006FE17E /* TokenizationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenizationService.swift; sourceTree = "<group>"; };
+		7C06D0232B4C61ED006FE17E /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		7C06D0252B4C61ED006FE17E /* SupportedLanguages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportedLanguages.swift; sourceTree = "<group>"; };
+		7C06D0312B4C6276006FE17E /* TokenizationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenizationPresenter.swift; sourceTree = "<group>"; };
+		7C06D0332B4C6280006FE17E /* TokenizationInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenizationInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +72,103 @@
 		7C06D0062B4C4FA5006FE17E /* Articula */ = {
 			isa = PBXGroup;
 			children = (
-				7C06D0072B4C4FA5006FE17E /* AppDelegate.swift */,
-				7C06D0092B4C4FA5006FE17E /* SceneDelegate.swift */,
-				7C06D00B2B4C4FA5006FE17E /* ViewController.swift */,
+				7C06D0302B4C6269006FE17E /* Core */,
+				7C06D0222B4C61ED006FE17E /* Extensions */,
+				7C06D0242B4C61ED006FE17E /* Helpers */,
+				7C06D01B2B4C61ED006FE17E /* Services */,
+				7C06D02C2B4C624B006FE17E /* Scenes */,
 				7C06D00D2B4C4FA5006FE17E /* Main.storyboard */,
 				7C06D0102B4C4FA7006FE17E /* Assets.xcassets */,
-				7C06D0122B4C4FA7006FE17E /* LaunchScreen.storyboard */,
 				7C06D0152B4C4FA7006FE17E /* Info.plist */,
 			);
 			path = Articula;
+			sourceTree = "<group>";
+		};
+		7C06D01B2B4C61ED006FE17E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7C06D01C2B4C61ED006FE17E /* WordTokenizationService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7C06D01C2B4C61ED006FE17E /* WordTokenizationService */ = {
+			isa = PBXGroup;
+			children = (
+				7C06D01D2B4C61ED006FE17E /* Tokenizers */,
+				7C06D0212B4C61ED006FE17E /* TokenizationService.swift */,
+			);
+			path = WordTokenizationService;
+			sourceTree = "<group>";
+		};
+		7C06D01D2B4C61ED006FE17E /* Tokenizers */ = {
+			isa = PBXGroup;
+			children = (
+				7C06D01E2B4C61ED006FE17E /* Tokenizer.swift */,
+				7C06D01F2B4C61ED006FE17E /* SpanishTokenizers.swift */,
+				7C06D0202B4C61ED006FE17E /* EnglishTokenizers.swift */,
+			);
+			path = Tokenizers;
+			sourceTree = "<group>";
+		};
+		7C06D0222B4C61ED006FE17E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7C06D0232B4C61ED006FE17E /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7C06D0242B4C61ED006FE17E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7C06D0252B4C61ED006FE17E /* SupportedLanguages.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7C06D02C2B4C624B006FE17E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				7C06D02F2B4C6259006FE17E /* Interactor */,
+				7C06D02E2B4C6257006FE17E /* Presenter */,
+				7C06D02D2B4C6254006FE17E /* UserInterface */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		7C06D02D2B4C6254006FE17E /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				7C06D00B2B4C4FA5006FE17E /* TokenizationViewController.swift */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		7C06D02E2B4C6257006FE17E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7C06D0312B4C6276006FE17E /* TokenizationPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		7C06D02F2B4C6259006FE17E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				7C06D0332B4C6280006FE17E /* TokenizationInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		7C06D0302B4C6269006FE17E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				7C06D0072B4C4FA5006FE17E /* AppDelegate.swift */,
+				7C06D0092B4C4FA5006FE17E /* SceneDelegate.swift */,
+				7C06D0122B4C4FA7006FE17E /* LaunchScreen.storyboard */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +242,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C06D00C2B4C4FA5006FE17E /* ViewController.swift in Sources */,
+				7C06D00C2B4C4FA5006FE17E /* TokenizationViewController.swift in Sources */,
+				7C06D02B2B4C61ED006FE17E /* SupportedLanguages.swift in Sources */,
+				7C06D0262B4C61ED006FE17E /* Tokenizer.swift in Sources */,
 				7C06D0082B4C4FA5006FE17E /* AppDelegate.swift in Sources */,
+				7C06D0272B4C61ED006FE17E /* SpanishTokenizers.swift in Sources */,
+				7C06D0282B4C61ED006FE17E /* EnglishTokenizers.swift in Sources */,
 				7C06D00A2B4C4FA5006FE17E /* SceneDelegate.swift in Sources */,
+				7C06D0322B4C6276006FE17E /* TokenizationPresenter.swift in Sources */,
+				7C06D02A2B4C61ED006FE17E /* String.swift in Sources */,
+				7C06D0292B4C61ED006FE17E /* TokenizationService.swift in Sources */,
+				7C06D0342B4C6280006FE17E /* TokenizationInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
