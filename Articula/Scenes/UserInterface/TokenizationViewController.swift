@@ -9,20 +9,60 @@ import UIKit
 import NaturalLanguage
 
 class TokenizationViewController: UIViewController {
-    @IBOutlet private weak var translatedTextLabel: UILabel!
-    @IBOutlet private weak var inputTextField: UITextField!
     
-    private var presenter: TokenizationPresenterProtocol!
+    let inTextField: UITextField = {
+        let textField = UITextField(frame: CGRect(x: 0, y: 0, width: 0, height: 50))
+        textField.placeholder = "Type here..."
+        textField.backgroundColor = .white
+        textField.borderStyle = .roundedRect
+        
+        return textField
+    }()
+    
+    let translationLabel: UILabel = {
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 0, height: 300))
+        label.textAlignment = .center
+        label.backgroundColor = .clear
+        label.font = .systemFont(ofSize: 17)
+        label.numberOfLines = 0
+        
+        return label
+    }()
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    var presenter: TokenizationPresenterProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .gray
+        view.addSubview(translationLabel)
+        view.addSubview(inTextField)
         setupUI()
-        presenter = TokenizationPresenter()
     }
     
     private func setupUI() {
-        inputTextField.delegate = self
-        inputTextField.addTarget(self, action: #selector(self.inputTextFieldChanged(_:)), for: .editingChanged)
+        translationLabel.translatesAutoresizingMaskIntoConstraints = false
+        inTextField.translatesAutoresizingMaskIntoConstraints = false
+        
+        translationLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        translationLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 120).isActive = true
+        translationLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 32).isActive = true
+        translationLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32).isActive = true
+        
+        inTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        inTextField.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 60).isActive = true
+        inTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 32).isActive = true
+        inTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32).isActive = true
+
+        inTextField.delegate = self
+        inTextField.addTarget(self, action: #selector(self.inputTextFieldChanged(_:)), for: .editingChanged)
     }
     
     @objc private func inputTextFieldChanged(_ sender: UITextField) {
@@ -32,10 +72,10 @@ class TokenizationViewController: UIViewController {
     
     func tokenizeText(_ text: String) {
         guard let sentence = presenter.tokenizeSentence(text) else {
-            translatedTextLabel.text = "Detecting text..."
+            translationLabel.text = "Detecting text..."
             return
         }
-        translatedTextLabel.text = sentence.joined(separator: "\n")
+        translationLabel.text = sentence.joined(separator: "\n")
     }
 }
 

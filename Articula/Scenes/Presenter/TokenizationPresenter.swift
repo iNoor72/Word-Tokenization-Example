@@ -12,13 +12,15 @@ protocol TokenizationPresenterProtocol {
     func tokenizeSentence(_ sentence: String) -> [String]?
 }
 
+protocol TokenizationPresenterDependenciesProtocol {
+    var interactor: TokenizationInteractorProtocol { get }
+}
+
 final class TokenizationPresenter {
-    private let interactor: TokenizationInteractorProtocol
+    var interactor: TokenizationInteractorProtocol
     
-    init() {
-        let tokenizationService = TokenizationService()
-        let dependencies = TokenizationInteractorDependencies(tokenizationService: tokenizationService)
-        interactor = TokenizationInteractor(dependencies: dependencies)
+    init(dependencies: TokenizationPresenterDependenciesProtocol) {
+        self.interactor = dependencies.interactor
     }
     
     private func getTokens(text: String) -> [String]? {
@@ -30,8 +32,4 @@ extension TokenizationPresenter: TokenizationPresenterProtocol {
     func tokenizeSentence(_ sentence: String) -> [String]? {
         getTokens(text: sentence)
     }
-}
-
-private struct TokenizationInteractorDependencies: TokenizationInteractorDependenicesProtocol {
-    var tokenizationService: TokenizationServiceProtocol
 }

@@ -10,7 +10,6 @@
 		7C06D0082B4C4FA5006FE17E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06D0072B4C4FA5006FE17E /* AppDelegate.swift */; };
 		7C06D00A2B4C4FA5006FE17E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06D0092B4C4FA5006FE17E /* SceneDelegate.swift */; };
 		7C06D00C2B4C4FA5006FE17E /* TokenizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06D00B2B4C4FA5006FE17E /* TokenizationViewController.swift */; };
-		7C06D00F2B4C4FA5006FE17E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C06D00D2B4C4FA5006FE17E /* Main.storyboard */; };
 		7C06D0112B4C4FA7006FE17E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C06D0102B4C4FA7006FE17E /* Assets.xcassets */; };
 		7C06D0142B4C4FA7006FE17E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C06D0122B4C4FA7006FE17E /* LaunchScreen.storyboard */; };
 		7C06D0262B4C61ED006FE17E /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06D01E2B4C61ED006FE17E /* Tokenizer.swift */; };
@@ -21,6 +20,7 @@
 		7C06D02B2B4C61ED006FE17E /* SupportedLanguages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06D0252B4C61ED006FE17E /* SupportedLanguages.swift */; };
 		7C06D0322B4C6276006FE17E /* TokenizationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06D0312B4C6276006FE17E /* TokenizationPresenter.swift */; };
 		7C06D0342B4C6280006FE17E /* TokenizationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06D0332B4C6280006FE17E /* TokenizationInteractor.swift */; };
+		7C06D0362B4C7EC2006FE17E /* TokenizationModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06D0352B4C7EC2006FE17E /* TokenizationModuleFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,6 @@
 		7C06D0072B4C4FA5006FE17E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C06D0092B4C4FA5006FE17E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7C06D00B2B4C4FA5006FE17E /* TokenizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenizationViewController.swift; sourceTree = "<group>"; };
-		7C06D00E2B4C4FA5006FE17E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C06D0102B4C4FA7006FE17E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C06D0132B4C4FA7006FE17E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C06D0152B4C4FA7006FE17E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,6 +39,7 @@
 		7C06D0252B4C61ED006FE17E /* SupportedLanguages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportedLanguages.swift; sourceTree = "<group>"; };
 		7C06D0312B4C6276006FE17E /* TokenizationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenizationPresenter.swift; sourceTree = "<group>"; };
 		7C06D0332B4C6280006FE17E /* TokenizationInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenizationInteractor.swift; sourceTree = "<group>"; };
+		7C06D0352B4C7EC2006FE17E /* TokenizationModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenizationModuleFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,6 @@
 				7C06D0242B4C61ED006FE17E /* Helpers */,
 				7C06D01B2B4C61ED006FE17E /* Services */,
 				7C06D02C2B4C624B006FE17E /* Scenes */,
-				7C06D00D2B4C4FA5006FE17E /* Main.storyboard */,
 				7C06D0102B4C4FA7006FE17E /* Assets.xcassets */,
 				7C06D0152B4C4FA7006FE17E /* Info.plist */,
 			);
@@ -133,6 +132,7 @@
 				7C06D02F2B4C6259006FE17E /* Interactor */,
 				7C06D02E2B4C6257006FE17E /* Presenter */,
 				7C06D02D2B4C6254006FE17E /* UserInterface */,
+				7C06D0352B4C7EC2006FE17E /* TokenizationModuleFactory.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -231,7 +231,6 @@
 			files = (
 				7C06D0142B4C4FA7006FE17E /* LaunchScreen.storyboard in Resources */,
 				7C06D0112B4C4FA7006FE17E /* Assets.xcassets in Resources */,
-				7C06D00F2B4C4FA5006FE17E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +248,7 @@
 				7C06D0272B4C61ED006FE17E /* SpanishTokenizers.swift in Sources */,
 				7C06D0282B4C61ED006FE17E /* EnglishTokenizers.swift in Sources */,
 				7C06D00A2B4C4FA5006FE17E /* SceneDelegate.swift in Sources */,
+				7C06D0362B4C7EC2006FE17E /* TokenizationModuleFactory.swift in Sources */,
 				7C06D0322B4C6276006FE17E /* TokenizationPresenter.swift in Sources */,
 				7C06D02A2B4C61ED006FE17E /* String.swift in Sources */,
 				7C06D0292B4C61ED006FE17E /* TokenizationService.swift in Sources */,
@@ -259,14 +259,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7C06D00D2B4C4FA5006FE17E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7C06D00E2B4C4FA5006FE17E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7C06D0122B4C4FA7006FE17E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -409,7 +401,7 @@
 				INFOPLIST_FILE = Articula/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -437,7 +429,7 @@
 				INFOPLIST_FILE = Articula/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
